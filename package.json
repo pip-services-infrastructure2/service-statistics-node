@@ -1,0 +1,60 @@
+{
+    "name": "service-statistics-node",
+    "version": "1.0.0",
+    "author": "Conceptual Vision Consulting LLC",
+    "description": "Statistics microservice in Node.js / ES2017",
+    "contributors": [
+        {
+            "name": "Sergey Seroukhov",
+            "email": "seroukhov@gmail.com"
+        }
+    ],
+    "main": "./obj/src/index.js",
+    "typings": "./obj/src/index.d.ts",
+    "keywords": [
+        "pip.services",
+        "statistics"
+    ],
+    "noAnalyze": true,
+    "repository": {
+        "type": "git",
+        "url": "ssh://git@github.com:pip-services-infrastructure2/service-statistics-node.git"
+    },
+    "license": "MIT",
+    "engines": {
+        "node": ">=14.0.0"
+    },
+    "private": false,
+    "scripts": {
+        "build": "tsc",
+        "watch": "tsc --watch",
+        "launch": "node run",
+        "relaunch": "tsc && node run",
+        "test": "mocha -t 10000 -R spec -u tdd --recursive ./obj/test",
+        "retest": "tsc && mocha -t 10000 -R spec -u tdd --recursive ./obj/test",
+        "benchmark": "matcha -R clean -I tdd ./obj/benchmark/run.js",
+        "rebenchmark": "tsc && matcha -R clean -I tdd ./obj/benchmark/run.js"
+    },
+    "dependencies": {
+        "moment-timezone": "^0.5.13",
+        "pip-services3-aws-nodex": "^1.1.*",
+        "pip-services3-commons-nodex": "^1.0.*",
+        "pip-services3-components-nodex": "^1.4.*",
+        "pip-services3-container-nodex": "^1.0.*",
+        "pip-services3-data-nodex": "^1.0.*",
+        "pip-services3-mongodb-nodex": "^1.0.1",
+        "pip-services3-rpc-nodex": "^1.2.*",
+        "pip-services3-swagger-nodex": "^1.0.0"
+    },
+    "devDependencies": {
+        "@types/chai": "*",
+        "@types/mocha": "*",
+        "@types/mongodb": "^2.1.38",
+        "@types/node": "*",
+        "chai": "*",
+        "matcha": "^0.7.0",
+        "mocha": "*",
+        "pip-benchmark-node": "^2.1.4",
+        "restify": "^4.3.0"
+    }
+}

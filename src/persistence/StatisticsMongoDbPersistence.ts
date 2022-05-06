@@ -116,7 +116,7 @@ export class StatisticsMongoDbPersistence
             if (type != StatCounterTypeV1.Year) {
                 data.month = momentTime.month() + 1;
                 if (type != StatCounterTypeV1.Month) {
-                    data.day = momentTime.date();
+                    data.day = momentTime.date() + 1;
                     if (type != StatCounterTypeV1.Day) {
                         data.hour = momentTime.hour();
                     }

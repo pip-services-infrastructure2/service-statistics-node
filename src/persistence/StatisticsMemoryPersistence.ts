@@ -117,7 +117,7 @@ export class StatisticsMemoryPersistence extends IdentifiableMemoryPersistence<S
                 if (type != StatCounterTypeV1.Year) {
                     item.month = momentTime.month() + 1;
                     if (type != StatCounterTypeV1.Month) {
-                        item.day = momentTime.date();
+                        item.day = momentTime.date() + 1;
                         if (type != StatCounterTypeV1.Day) {
                             item.hour = momentTime.hour();
                         }

@@ -1,3 +1,8 @@
+<a name="1.0.1"></a> ### 1.0.1 (2022-05-06)
+
+#### Bug Fixes
+* Fixed id generation for statistics object
+
 <a name="1.0.0"></a> ### 1.0.0 (2022-05-06)
 
 #### Features

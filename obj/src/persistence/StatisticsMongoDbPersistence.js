@@ -105,7 +105,7 @@ class StatisticsMongoDbPersistence extends pip_services3_mongodb_nodex_1.Identif
             if (type != StatCounterTypeV1_1.StatCounterTypeV1.Year) {
                 data.month = momentTime.month() + 1;
                 if (type != StatCounterTypeV1_1.StatCounterTypeV1.Month) {
-                    data.day = momentTime.date();
+                    data.day = momentTime.date() + 1;
                     if (type != StatCounterTypeV1_1.StatCounterTypeV1.Day) {
                         data.hour = momentTime.hour();
                     }

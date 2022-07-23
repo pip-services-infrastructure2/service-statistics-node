@@ -5,7 +5,7 @@ $ErrorActionPreference = "Stop"
 
 # Get component data and set necessary variables
 $component = Get-Content -Path "component.json" | ConvertFrom-Json
-$rcImage="$($component.registry)/$($component.name):$($component.version)-$($component.build)-rc"
+$rcImage = "$($component.registry)/$($component.name):$($component.version)-$($component.build)-rc"
 
 # Define server name
 $pos = $component.registry.IndexOf("/")

@@ -10,7 +10,7 @@ import { StatCounterV1 } from '../../../src/data/version1/StatCounterV1';
 import { StatCounterTypeV1 } from '../../../src/data/version1/StatCounterTypeV1';
 import { StatisticsMemoryPersistence } from '../../../src/persistence/StatisticsMemoryPersistence';
 import { StatisticsController } from '../../../src/logic/StatisticsController';
-import { StatisticsHttpServiceV1 } from '../../../src/services/version1/StatisticsHttpServiceV1';
+import { StatisticsCommandableHttpServiceV1 } from '../../../src/services/version1/StatisticsCommandableHttpServiceV1';
 
 let httpConfig = ConfigParams.fromTuples(
     "connection.protocol", "http",
@@ -19,8 +19,8 @@ let httpConfig = ConfigParams.fromTuples(
 );
 
 
-suite('StatisticsHttpServiceV1', ()=> {
-    let service: StatisticsHttpServiceV1;
+suite('StatisticsCommandableHttpServiceV1', ()=> {
+    let service: StatisticsCommandableHttpServiceV1;
 
     let rest: any;
 
@@ -28,13 +28,13 @@ suite('StatisticsHttpServiceV1', ()=> {
         let persistence = new StatisticsMemoryPersistence();
         let controller = new StatisticsController();
 
-        service = new StatisticsHttpServiceV1();
+        service = new StatisticsCommandableHttpServiceV1();
         service.configure(httpConfig);
 
         let references: References = References.fromTuples(
             new Descriptor('service-statistics', 'persistence', 'memory', 'default', '1.0'), persistence,
             new Descriptor('service-statistics', 'controller', 'default', 'default', '1.0'), controller,
-            new Descriptor('service-statistics', 'service', 'http', 'default', '1.0'), service
+            new Descriptor('service-statistics', 'service', 'commandable-http', 'default', '1.0'), service
         );
         controller.setReferences(references);
         service.setReferences(references);

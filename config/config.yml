@@ -46,7 +46,7 @@
 - descriptor: "service-statistics:controller:default:default:1.0"
 
 # Common HTTP endpoint
-- descriptor: "pip-services:endpoint:http:default:1.0"
+- descriptor: "pip-services:endpoint:commandable-http:default:1.0"
   connection:
     protocol: "http"
     host: "0.0.0.0"

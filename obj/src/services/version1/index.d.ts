@@ -1,1 +1,1 @@
-export { StatisticsHttpServiceV1 } from './StatisticsHttpServiceV1';
+export { StatisticsCommandableHttpServiceV1 } from './StatisticsCommandableHttpServiceV1';

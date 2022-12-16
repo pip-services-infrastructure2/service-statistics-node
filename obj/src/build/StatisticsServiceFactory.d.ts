@@ -6,6 +6,6 @@ export declare class StatisticsServiceFactory extends Factory {
     static FilePersistenceDescriptor: Descriptor;
     static MongoDbPersistenceDescriptor: Descriptor;
     static ControllerDescriptor: Descriptor;
-    static HttpServiceDescriptor: Descriptor;
+    static CmdHttpServiceDescriptor: Descriptor;
     constructor();
 }

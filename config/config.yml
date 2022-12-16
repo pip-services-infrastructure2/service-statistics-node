@@ -46,14 +46,14 @@
 - descriptor: "service-statistics:controller:default:default:1.0"
 
 # Common HTTP endpoint
-- descriptor: "pip-services:endpoint:commandable-http:default:1.0"
+- descriptor: "pip-services:endpoint:http:default:1.0"
   connection:
     protocol: "http"
     host: "0.0.0.0"
     port: 8080
 
 # HTTP endpoint version 1.0
-- descriptor: "service-statistics:service:http:default:1.0"
+- descriptor: "service-statistics:service:commandable-http:default:1.0"
   swagger:
     enable: true
     auto: true

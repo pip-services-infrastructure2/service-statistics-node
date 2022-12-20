@@ -1,6 +1,6 @@
 {
     "name": "service-statistics-node",
-    "version": "1.0.1",
+    "version": "1.1.0",
     "author": "Conceptual Vision Consulting LLC",
     "description": "Statistics microservice in Node.js / ES2017",
     "contributors": [
